@@ -3,6 +3,7 @@ import { drizzle, BetterSQLite3Database } from 'drizzle-orm/better-sqlite3'
 import { migrate } from 'drizzle-orm/better-sqlite3/migrator'
 import Database from 'better-sqlite3'
 import { tasks } from './schema'
+import cors from 'cors'
 
 const sqlite = new Database('sqlite.db')
 const db: BetterSQLite3Database = drizzle(sqlite)
@@ -11,6 +12,7 @@ migrate(db, { migrationsFolder: 'migrations' })
 const app = express()
 const port = 4000
 
+app.use(cors())
 app.use(express.json())
 
 app.get('/addExample', async (req, res) => {
