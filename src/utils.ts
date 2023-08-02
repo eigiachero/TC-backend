@@ -8,8 +8,6 @@ export const validate =
   async (req: Request, res: Response, next: NextFunction) => {
     const data = req.body
 
-    console.log(data)
-
     try {
       await schema.parseAsync(data)
       return next()
