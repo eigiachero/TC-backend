@@ -6,8 +6,10 @@ componentes para el diseño de la interfaz de usuario
 
 # Instalación
 - Clonar el repositorio de github
-- Ejecutar el comando `npm run dev`
-- Acceder a la api desde `localhost:4000/tasks`
+- Instalar ts-node globalmente (en caso de no tenerlo), mediante `npm i -g ts-node`
+- Instalar las dependencias del repo mediante el comando `npm install`
+- Ejecutar el comando `npm run dev` para comenzar a ejecutar la API
+- Acceder a la API desde `localhost:4000/tasks`
 
 ### Demo online
 El backend se encuentra alojado en AWS EC2, en la direccion http://ec2-3-15-168-146.us-east-2.compute.amazonaws.com/. Se puede probar el endpoint para obtener la lista de 
